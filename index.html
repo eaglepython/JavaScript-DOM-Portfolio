@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Bidias - Quantitative Researcher  & Software Engineer</title>
+    <title>Joseph Bidias - Quantitative Researcher & Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/interactive-styles.css">
 </head>
 <body>
     <!-- Matrix Background with AI Data Streams -->
@@ -96,6 +97,13 @@
                 <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
                 <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
             </ul>
+            
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+                <div class="toggle-bg"></div>
+            </button>
         </div>
     </nav>
 
@@ -106,7 +114,7 @@
                 <div class="profile-photo">
                     <div class="photo-border">
                         <div class="scanning-line"></div>
-                        <img src="profile.jpg" alt="Joseph Bidias">
+                        <img src="assets/images/profile.jpg" alt="Joseph Bidias">
                         <div class="ai-overlay">
                             <div class="recognition-grid"></div>
                         </div>
@@ -127,8 +135,8 @@
                 
                 <div class="description">
                     <div class="code-bracket">{</div>
-                    Bridging the gap between cutting-edge software engineering and Quantitative Finance 
-                      Passionate about developing innovative web solutions and intelligent systems that revolutionize Financial services  and beyond.
+                    Bridging the gap between cutting-edge software engineering and Quantitative Finance. 
+                    Passionate about developing innovative web solutions and intelligent systems that revolutionize Financial services and beyond.
                     <div class="code-bracket">}</div>
                 </div>
                 
@@ -202,7 +210,7 @@
                     <p>
                         I specialize in Financial Services and full-stack software development, combining scientific rigor with creative problem-solving. 
                         With a strong background in AI engineering, I build impactful solutions at the intersection of Finance and technology. 
-                        I'm passionate about using software and AI to improve human well-being and drive innovation  systems.
+                        I'm passionate about using software and AI to improve human well-being and drive innovation in financial systems.
                     </p>
                     <div class="card-footer">
                         <div class="progress-line"></div>
@@ -595,7 +603,7 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="info-header">
-                        <h3>Research & Development Collaborations</h3>
+                        <h3>Connect & Collaborate</h3>
                         <div class="info-scan-line"></div>
                     </div>
                     <p>
@@ -608,44 +616,46 @@
                     </p>
                     
                     <div class="expertise-section">
-                        <h4>Areas of Expertise:</h4>
+                        <h4>Core Expertise:</h4>
                         <ul class="expertise-list">
-                            <li><span class="list-bullet">▶</span> Full-Stack Web Development (MERN)</li>
-                            <li><span class="list-bullet">▶</span> Biomedical AI & Machine Learning</li>
-                            <li><span class="list-bullet">▶</span> Healthcare Data Analytics</li>
-                            <li><span class="list-bullet">▶</span> AI Engineering & MLOps</li>
-                            <li><span class="list-bullet">▶</span> Medical Device Software</li>
+                            <li><span class="list-bullet">▶</span> Full-Stack Web Development (React, Node.js)</li>
+                            <li><span class="list-bullet">▶</span> JavaScript & Modern Frontend Frameworks</li>
+                            <li><span class="list-bullet">▶</span> Data Analytics & Visualization</li>
+                            <li><span class="list-bullet">▶</span> Software Architecture & Performance</li>
+                            <li><span class="list-bullet">▶</span> Interactive User Experiences</li>
                         </ul>
                     </div>
                     
                     <div class="social-links">
-                        <a href="mailto:joseph.bidias@biomedical-ai.com" class="social-link" title="Email">
+                        <a href="mailto:joseph.bidias@gmail.com" class="social-link email-link" title="Send Email">
                             <i class="fas fa-envelope"></i>
                             <div class="social-ripple"></div>
+                            <span class="social-tooltip">Email Me</span>
                         </a>
-                        <a href="https://linkedin.com/in/joseph-bidias" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+                        <a href="https://linkedin.com/in/joseph-bidias" class="social-link linkedin-link" title="LinkedIn Profile" target="_blank" rel="noopener">
                             <i class="fab fa-linkedin-in"></i>
                             <div class="social-ripple"></div>
+                            <span class="social-tooltip">LinkedIn</span>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=joseph-bidias" class="social-link" title="Google Scholar" target="_blank" rel="noopener">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div class="social-ripple"></div>
-                        </a>
-                        <a href="https://github.com/joseph-bidias" class="social-link" title="GitHub" target="_blank" rel="noopener">
+                        <a href="https://github.com/josephbidias" class="social-link github-link" title="GitHub Profile" target="_blank" rel="noopener">
                             <i class="fab fa-github"></i>
                             <div class="social-ripple"></div>
+                            <span class="social-tooltip">GitHub</span>
                         </a>
-                        <a href="https://twitter.com/joseph_bidias" class="social-link" title="Twitter" target="_blank" rel="noopener">
+                        <a href="https://twitter.com/joseph_bidias" class="social-link twitter-link" title="Twitter Profile" target="_blank" rel="noopener">
                             <i class="fab fa-twitter"></i>
                             <div class="social-ripple"></div>
+                            <span class="social-tooltip">Twitter</span>
                         </a>
-                        <a href="https://orcid.org/0000-0000-0000-0000" class="social-link" title="ORCID" target="_blank" rel="noopener">
-                            <i class="fab fa-orcid"></i>
-                            <div class="social-ripple"></div>
-                        </a>
-                        <a href="https://discord.com/users/YOUR_DISCORD_ID" class="social-link" title="Discord" target="_blank" rel="noopener">
+                        <a href="https://discord.gg/josephbidias" class="social-link discord-link" title="Discord Server" target="_blank" rel="noopener">
                             <i class="fab fa-discord"></i>
                             <div class="social-ripple"></div>
+                            <span class="social-tooltip">Discord</span>
+                        </a>
+                        <a href="tel:+1234567890" class="social-link phone-link" title="Call Me">
+                            <i class="fas fa-phone"></i>
+                            <div class="social-ripple"></div>
+                            <span class="social-tooltip">Call</span>
                         </a>
                     </div>
                 </div>
@@ -657,38 +667,38 @@
                     </div>
                     <form>
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                             <div class="input-border"></div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                             <div class="input-border"></div>
                         </div>
                         <div class="form-group">
                             <label for="company">Company/Institution</label>
-                            <input type="text" id="company" name="company">
+                            <input type="text" id="company" name="company" placeholder="Your organization (optional)">
                             <div class="input-border"></div>
                         </div>
                         <div class="form-group">
                             <label for="subject">Project/Research Interest</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required>
                             <div class="input-border"></div>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, research interests, or collaboration ideas..." required></textarea>
                             <div class="input-border"></div>
                         </div>
                         <button type="submit" class="cta-btn btn-primary">
                             <span class="btn-text">Send Message</span>
                             <div class="btn-particles"></div>
-                        </button>  </button>
-                    </form>  </form>
-                </div>  </div>
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div> </div>
+        </div>
     </section>
 
     <style>
@@ -709,5 +719,10 @@
     transition: opacity 0.5s;
 }
     </style>
-</html></body></body>
+    
+    <!-- Interactive Features JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/enhanced-features.js"></script>
+    <script src="assets/js/advanced-features.js"></script>
+</body>
 </html>
