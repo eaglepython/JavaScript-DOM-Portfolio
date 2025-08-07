@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Backup Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/interactive-styles.css">
 </head>
@@ -627,32 +629,32 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="mailto:joseph.bidias@gmail.com" class="social-link email-link" title="Send Email">
+                        <a href="mailto:joseph.bidias@gmail.com" class="social-link email-link" title="Send Email" data-icon="✉">
                             <i class="fas fa-envelope"></i>
                             <div class="social-ripple"></div>
                             <span class="social-tooltip">Email Me</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/joseph-bidias-eaglepython" class="social-link linkedin-link" title="LinkedIn Profile" target="_blank" rel="noopener">
+                        <a href="https://www.linkedin.com/in/joseph-bidias-eaglepython" class="social-link linkedin-link" title="LinkedIn Profile" target="_blank" rel="noopener" data-icon="in">
                             <i class="fab fa-linkedin-in"></i>
                             <div class="social-ripple"></div>
                             <span class="social-tooltip">LinkedIn</span>
                         </a>
-                        <a href="https://github.com/eaglepython" class="social-link github-link" title="GitHub Profile" target="_blank" rel="noopener">
+                        <a href="https://github.com/eaglepython" class="social-link github-link" title="GitHub Profile" target="_blank" rel="noopener" data-icon="⚡">
                             <i class="fab fa-github"></i>
                             <div class="social-ripple"></div>
                             <span class="social-tooltip">GitHub</span>
                         </a>
-                        <a href="https://x.com/joseph_eaglepython" class="social-link twitter-link" title="X (Twitter) Profile" target="_blank" rel="noopener">
+                        <a href="https://x.com/joseph_eaglepython" class="social-link twitter-link" title="X (Twitter) Profile" target="_blank" rel="noopener" data-icon="𝕏">
                             <i class="fab fa-twitter"></i>
                             <div class="social-ripple"></div>
                             <span class="social-tooltip">X (Twitter)</span>
                         </a>
-                        <a href="https://discord.gg/eaglepython" class="social-link discord-link" title="Discord Server" target="_blank" rel="noopener">
+                        <a href="https://discord.gg/eaglepython" class="social-link discord-link" title="Discord Server" target="_blank" rel="noopener" data-icon="💬">
                             <i class="fab fa-discord"></i>
                             <div class="social-ripple"></div>
                             <span class="social-tooltip">Discord</span>
                         </a>
-                        <a href="tel:+1-555-123-4567" class="social-link phone-link" title="Call Me">
+                        <a href="tel:+1-555-123-4567" class="social-link phone-link" title="Call Me" data-icon="📞">
                             <i class="fas fa-phone"></i>
                             <div class="social-ripple"></div>
                             <span class="social-tooltip">Call</span>
@@ -702,6 +704,51 @@
     </section>
 
     <style>
+        /* Font Awesome Fallback Styles */
+        .social-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            margin: 0 10px !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .social-link i {
+            font-size: 20px !important;
+            z-index: 2 !important;
+            position: relative !important;
+        }
+        
+        /* Fallback for missing Font Awesome icons */
+        .social-link::before {
+            content: attr(data-icon) !important;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            z-index: 1 !important;
+        }
+        
+        .email-link { background: linear-gradient(45deg, #ea4335, #fbbc05) !important; }
+        .linkedin-link { background: linear-gradient(45deg, #0077b5, #00a0dc) !important; }
+        .github-link { background: linear-gradient(45deg, #333, #666) !important; }
+        .twitter-link { background: linear-gradient(45deg, #1da1f2, #1991db) !important; }
+        .discord-link { background: linear-gradient(45deg, #5865f2, #7289da) !important; }
+        .phone-link { background: linear-gradient(45deg, #00ff88, #00cc6a) !important; }
+        
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.1) !important;
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3) !important;
+        }
+        
         #contact::before {
     content: "";
     position: absolute;
@@ -711,7 +758,7 @@
     height: 100%;
     background:
         linear-gradient(to right, rgba(16,20,32,0.85) 0%, rgba(16,20,32,0.3) 65%, rgba(16,20,32,0) 100%),
-        url('Photo from Joseph B.jpg') center center/cover no-repeat;
+        url('assets/images/Photo from Joseph B.jpg') center center/cover no-repeat;
     opacity: 0.18;
     z-index: 0;
     pointer-events: none;
@@ -724,5 +771,44 @@
     <script src="assets/js/script.js"></script>
     <script src="assets/js/enhanced-features.js"></script>
     <script src="assets/js/advanced-features.js"></script>
+    
+    <!-- Font Awesome Fallback Script -->
+    <script>
+        // Check if Font Awesome is loaded and provide fallbacks
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const socialIcons = document.querySelectorAll('.social-link i');
+                
+                socialIcons.forEach(icon => {
+                    const computedStyle = window.getComputedStyle(icon);
+                    
+                    // Check if Font Awesome is loading properly
+                    if (computedStyle.fontFamily.indexOf('Font Awesome') === -1) {
+                        console.log('Font Awesome not detected, applying fallbacks...');
+                        
+                        // Apply fallback styles
+                        const link = icon.closest('.social-link');
+                        const fallbackIcon = link.getAttribute('data-icon');
+                        
+                        if (fallbackIcon) {
+                            icon.style.display = 'none';
+                            link.style.fontSize = '20px';
+                            link.style.color = 'white';
+                            link.style.fontWeight = 'bold';
+                            
+                            // Create fallback text
+                            const fallbackElement = document.createElement('span');
+                            fallbackElement.textContent = fallbackIcon;
+                            fallbackElement.style.fontSize = '20px';
+                            fallbackElement.style.fontWeight = 'bold';
+                            fallbackElement.style.color = 'white';
+                            
+                            link.insertBefore(fallbackElement, icon);
+                        }
+                    }
+                });
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
